@@ -4,7 +4,7 @@ game.resources = [
 	 * @example
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
-	 {name: "wow lily", type:"image", src:"data/img/map/kitchen.png"}
+	 {name: "kitchen.png", type:"image", src:"data/img/kitchen.png"},
 
 	/* Atlases 
 	 * @example
