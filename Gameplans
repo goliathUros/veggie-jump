@@ -1,0 +1,43 @@
+a flat stage
+endless running until death
+
+Potato jumping over obstacles
+	potato movements
+		potato sprites
+		potato speed 
+			speeds up over time
+		sliding/shuffling along
+			jump button only - space bar
+	stage speed
+		kitchen stage (repeating?)
+			infinite kitchen counter
+			pitfalls
+				gaps
+				pots of stuff
+			shelves
+				jump through bottom to land on top
+			ceiling
+				hanging pots and pans
+	Obstacles
+		knives
+		flying knives
+		running mice
+
+	ART
+		stage
+		background
+		potato sprites
+		obstacles
+		 
+Losing
+	death = restarting
+		pitfalls
+		touching an obstacle
+Scoring 
+	endless running
+	distance counter - potameter
+	
+
+
+	obstacle randomizer
+		obstacles (INTRO set up that cook is chasing)
