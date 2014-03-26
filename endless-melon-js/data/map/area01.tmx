@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="30" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="wow lily " tilewidth="32" tileheight="32">
+  <image source="../img/kitchen.png" width="600" height="421"/>
+ </tileset>
+ <layer name="stage" width="30" height="15">
+  <data encoding="base64">
+  </data>
+ </layer>
+ <layer name="ledges" width="30" height="15">
+  <data encoding="base64">
+  </data>
+ </layer>
+ <layer name="tiny ledges" width="30" height="15">
+  <data encoding="base64">
+  </data>
+ </layer>
+</map>
