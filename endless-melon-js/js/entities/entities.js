@@ -52,8 +52,14 @@ game.PlayerEntity = me.ObjectEntity.extend({
         }
         if (game.data.score > 2000) {
             this.renderable.setCurrentAnimation("Snowman");
+            game.Snowbkg.visible = true;
+            game.Kitchenbkg.visible = false;
+            game.PlatformEntity.vel.x === -10;
         } else {
             this.renderable.setCurrentAnimation("Potato");
+            game.Kitchenbkg.visible = true;
+            game.Snowbkg.visible = false;
+            game.PlatformEntity.vel.x === -5;
         }
 
         if (me.input.isKeyPressed('jump')) {

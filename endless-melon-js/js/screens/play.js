@@ -26,13 +26,25 @@ game.PlayScreen = me.ScreenObject.extend({
         }
         me.game.collisionMap = new game.NullCollisionLayer(640, 480);
 
-        var bkgImage = me.game.world.addChild(new me.ImageLayer(
+        game.Kitchenbkg = new me.ImageLayer(
             'background',
             640,
             480,
             'kitchen',
             -1,
-            1));
+            1);
+        game.Snowbkg = new me.ImageLayer(
+            'background',
+            640,
+            480,
+            'snow',
+            -1,
+            1);
+        me.game.world.addChild(game.Kitchenbkg);
+        me.game.world.addChild(game.Snowbkg);
+        game.Snowbkg.visible = false;
+        /*game.Kitchenbkg.visible = false;*/
+        
         var player = me.entityPool.newInstanceOf("mainPlayer", 150, 100, {});
         me.game.world.addChild(player);
         me.game.world.addChild(new game.PlatformGenerator());
