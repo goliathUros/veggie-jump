@@ -272,7 +272,7 @@ game.RenderableRect = me.Renderable.extend({
     },
     draw: function(context) {
         context.save();
-        context.fillStyle = '#954510';
+        context.fillStyle = '#464646';
         context.fillRect(this.pos.x, this.pos.y, this.width, this.height);
         context.restore();
     }
