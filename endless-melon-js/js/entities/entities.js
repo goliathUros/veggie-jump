@@ -18,6 +18,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
         settings.image = "Potato";
         settings.spritewidth = 51;
         this.parent(x, y, settings);
+        this.renderable.addAnimation("Potato",[0]);
+        this.renderable.addAnimation("Snowman",[1]);
+        this.renderable.setCurrentAnimation("Potato");
         this.collidable = false;
         this.height = 64;
         this.alwaysUpdate = true;
@@ -46,6 +49,11 @@ game.PlayerEntity = me.ObjectEntity.extend({
             game.data.score = 0;
         } else {
             game.data.score = game.data.score + 1;
+        }
+        if (game.data.score > 2000) {
+            this.renderable.setCurrentAnimation("Snowman");
+        } else {
+            this.renderable.setCurrentAnimation("Potato");
         }
 
         if (me.input.isKeyPressed('jump')) {

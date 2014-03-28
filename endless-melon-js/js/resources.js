@@ -10,7 +10,7 @@ game.resources = [
     // our level tileset
 	{name: "area01_level_tiles",  type:"image",	src: "data/img/map/area01_level_tiles.png"},
     // the main player spritesheet
-	{name: "Potato", type:"image", src: "data/img/sprite/Potato.png"},
+	{name: "Potato", type:"image", src: "data/img/sprite/spritesheet.png"},
 	// the parallax background
 	{name: "area01_bkg0",         type:"image",	src: "data/img/area01_bkg0.png"},
 	{name: "area01_bkg1",         type:"image",	src: "data/img/area01_bkg1.png"},
