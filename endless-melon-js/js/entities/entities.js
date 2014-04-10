@@ -54,12 +54,10 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.renderable.setCurrentAnimation("Snowman");
             game.Snowbkg.visible = true;
             game.Kitchenbkg.visible = false;
-            game.PlatformEntity.vel.x === -10;
         } else {
             this.renderable.setCurrentAnimation("Potato");
             game.Kitchenbkg.visible = true;
             game.Snowbkg.visible = false;
-            game.PlatformEntity.vel.x === -5;
         }
 
         if (me.input.isKeyPressed('jump')) {
@@ -286,7 +284,11 @@ game.RenderableRect = me.Renderable.extend({
     },
     draw: function(context) {
         context.save();
+<<<<<<< HEAD
         context.fillStyle = '#cfcfe8';
+=======
+        context.fillStyle = '#955100';
+>>>>>>> b0262957c6536c0d30322b395bb5bbec668e235c
         context.fillRect(this.pos.x, this.pos.y, this.width, this.height);
         context.restore();
     }
