@@ -63,7 +63,12 @@ var game = {
         
 
 		// Start the game.
+<<<<<<< HEAD
 		me.state.change(me.state.MENU);
 		//me.state.change(me.state.PLAY);
+=======
+		// me.state.change(me.state.MENU);
+		me.state.change(me.state.MENU);
+>>>>>>> 459d73b1ae3645e91e5ccd94f71d68c36baaa543
 	}
 };

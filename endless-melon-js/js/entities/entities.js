@@ -44,8 +44,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
     update: function() {
         if (this.collisionBox.top > me.game.world.height) {
             // Player died, but we'll just make them jump!
-            this.pos.y = me.game.world.height;
-            this.vel.y = -2 * this.maxVel.y;
+            //this.pos.y = me.game.world.height;
+            me.state.change(me.state.MENU);
+           // this.vel.y = -2 * this.maxVel.y;
             game.data.score = 0;
         } else {
             game.data.score = game.data.score + 1;
