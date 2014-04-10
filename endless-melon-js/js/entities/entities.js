@@ -286,7 +286,7 @@ game.RenderableRect = me.Renderable.extend({
     },
     draw: function(context) {
         context.save();
-        context.fillStyle = '#464646';
+        context.fillStyle = '#cfcfe8';
         context.fillRect(this.pos.x, this.pos.y, this.width, this.height);
         context.restore();
     }
