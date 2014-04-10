@@ -63,7 +63,7 @@ var game = {
         
 
 		// Start the game.
-		// me.state.change(me.state.MENU);
-		me.state.change(me.state.PLAY);
+		me.state.change(me.state.MENU);
+		//me.state.change(me.state.PLAY);
 	}
 };
