@@ -139,7 +139,7 @@ game.CoinEntity = me.ObjectEntity.extend({
         me.audio.play("cling");
 
         // give some score
-        game.data.score += 250;        
+        game.data.score += 50;        
 
         // make sure it cannot be collected "again"
         this.collidable = true;
