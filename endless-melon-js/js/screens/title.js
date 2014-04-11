@@ -13,7 +13,11 @@ game.TitleScreen = me.ScreenObject.extend({
         this.scrollerfont = null;
         this.scrollertween = null;
 
+<<<<<<< HEAD
         this.scroller = "A GAME CREATED BY STUDENTS OF THE MISSION BIT CODING CLASS";
+=======
+        this.scroller = "MADE BY BOB AND THE POTATOES";
+>>>>>>> 1c0e0d559e1eb984d878cd45e2994cbb7279c5b4
         this.scrollerpos = 600;
     },
 
