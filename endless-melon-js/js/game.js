@@ -49,7 +49,7 @@ var game = {
 
         // add our player entity in the entity pool
         me.entityPool.add("mainPlayer", game.PlayerEntity);
-        me.entityPool.add("CoinEntity", game.CoinEntity);
+        me.entityPool.add("CoinEntity", game.CoinEntity, true);
         me.entityPool.add("EnemyEntity", game.EnemyEntity);
         me.entityPool.add("PlatformEntity", game.PlatformEntity, true);
 
@@ -66,4 +66,5 @@ var game = {
 		me.state.change(me.state.MENU);
 		//me.state.change(me.state.PLAY);
     }
-};
+    };
+    
