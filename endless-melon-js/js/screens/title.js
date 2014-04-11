@@ -13,7 +13,7 @@ game.TitleScreen = me.ScreenObject.extend({
         this.scrollerfont = null;
         this.scrollertween = null;
 
-        this.scroller = "A SMALL STEP BY STEP TUTORIAL FOR GAME CREATION WITH MELONJS       ";
+        this.scroller = "A GAME CREATED BY STUDENTS OF THE MISSION BIT CODING CLASS";
         this.scrollerpos = 600;
     },
 
