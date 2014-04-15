@@ -251,7 +251,7 @@ game.PlatformGenerator = me.Renderable.extend({
             this.nextPlatformAt = this.platformFrequency;
             var platform = me.entityPool.newInstanceOf("PlatformEntity", this.width, 300 + Math.floor(Math.random() * 100), {});
             me.game.world.addChild(platform);
-            var coin = me.entityPool.newInstanceOf("CoinEntity", this.width, 300 + Math.floor(Math.random() * 100), {});
+            var coin = me.entityPool.newInstanceOf("CoinEntity", this.width, 210 + Math.floor(Math.random() * 100), {});
             me.game.world.addChild(coin);
         }
         this.tick = this.tick + 1;
