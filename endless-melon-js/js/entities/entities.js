@@ -121,35 +121,41 @@ game.PlayerEntity = me.ObjectEntity.extend({
 /*----------------
  a Coin entity
 ------------------------ */
-game.CoinEntity = me.CollectableEntity.extend({
-    // extending the init function is not mandatory
-    // unless you need to add some extra initialization
+
+game.CoinEntity = me.ObjectEntity.extend({
     init: function(x, y, settings) {
         // define this here instead of tiled
         settings.image = "spinning_coin_gold";
         settings.spritewidth = 32;
         // call the parent constructor
         this.parent(x, y, settings);
+        this.collidable = true;
+        this.type = 'coin';
+        this.gravity = 0;
+        this.vel.x = -5;
+        this.alwaysUpdate = true;
     },
-
-    // this function is called by the engine, when
-    // an object is touched by something (here collected)
-    onCollision: function() {
-        // do something when collected
-
-        // play a "coin collected" sound
+    onCollision: function(res, obj) {
         me.audio.play("cling");
 
         // give some score
-        game.data.score += 250;        
+        game.data.score += 50;        
 
         // make sure it cannot be collected "again"
         this.collidable = true;
         // remove it
         me.game.remove(this);
+    },
+    update: function() {
+        this.updateMovement();
+        if (this.collisionBox.right < -150) {
+            me.game.world.removeChild(this);
+            me.entityPool.freeInstance(this);
+        }
+        return true;
     }
-
 });
+
 
 
 /* --------------------------
@@ -245,6 +251,8 @@ game.PlatformGenerator = me.Renderable.extend({
             this.nextPlatformAt = this.platformFrequency;
             var platform = me.entityPool.newInstanceOf("PlatformEntity", this.width, 300 + Math.floor(Math.random() * 100), {});
             me.game.world.addChild(platform);
+            var coin = me.entityPool.newInstanceOf("CoinEntity", this.width, 300 + Math.floor(Math.random() * 100), {});
+            me.game.world.addChild(coin);
         }
         this.tick = this.tick + 1;
         return true;
