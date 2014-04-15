@@ -51,7 +51,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         } else {
             game.data.score = game.data.score + 1;
         }
-        if (game.data.score > 2000) {
+        if (game.data.score > 4200) {
             this.renderable.setCurrentAnimation("Snowman");
             game.Snowbkg.visible = true;
             game.Kitchenbkg.visible = false;
