@@ -68,7 +68,7 @@ game.TitleScreen = me.ScreenObject.extend({
     draw: function(context) {
         context.drawImage(this.title, 0, 0);
 
-        this.font.draw(context, "PRESS ENTER TO PLAY", 20, 240);
+        this.font.draw(context, "PRESS ENTER TO PLAY", 20, 380);
         this.scrollerfont.draw(context, this.scroller, this.scrollerpos, 440);
     },
 
