@@ -40,9 +40,18 @@ game.PlayScreen = me.ScreenObject.extend({
             'snow',
             -1,
             1);
+        game.Saiyanbkg = new me.ImageLayer(
+            'background',
+            640,
+            480,
+            'dragonball',
+            -1,
+            1);
         me.game.world.addChild(game.Kitchenbkg);
         me.game.world.addChild(game.Snowbkg);
+        me.game.world.addChild(game.Saiyanbkg);
         game.Snowbkg.visible = false;
+        game.Saiyanbkg.visible=false;
         /*game.Kitchenbkg.visible = false;*/
         
         var player = me.entityPool.newInstanceOf("mainPlayer", 150, 100, {});

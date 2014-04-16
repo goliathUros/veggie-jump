@@ -16,6 +16,7 @@ game.resources = [
 	{name: "area01_bkg1",         type:"image",	src: "data/img/area01_bkg1.png"},
     {name:"kitchen", type:"image", src:"data/img/kitchen.png"},
     {name:"snow", type:"image", src:"data/img/snow.jpg"},
+    {name:"dragonball", type:"image", src:"data/img/dragonball.jpg"},
 	// the spinning coin spritesheet
 	{name: "spinning_coin_gold",  type:"image",	src: "data/img/sprite/spinning_coin_gold.png"},
 	// our enemty entity

@@ -62,10 +62,11 @@ game.PlayerEntity = me.ObjectEntity.extend({
             game.Snowbkg.visible = false;
         }
         
-        if (game.data.score >9000 && <10000) {
+        if (game.data.score > 9000) {
             this.renderable.setCurrentAnimation("Saiyan");
-        } else {
-            this.renderable.setCurrentAnimation("Snowman");
+            game.Saiyanbkg.visible=true;
+            game.Snowbkg.visible=false;
+            game.Kitchenbkg.visible=false;
         }
 
         if (me.input.isKeyPressed('jump')) {
