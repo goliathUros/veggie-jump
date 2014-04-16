@@ -20,6 +20,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.parent(x, y, settings);
         this.renderable.addAnimation("Potato",[0]);
         this.renderable.addAnimation("Snowman",[1]);
+        this.renderable.addAnimation("Saiyan",[2]);
         this.renderable.setCurrentAnimation("Potato");
         this.collidable = false;
         this.height = 64;
