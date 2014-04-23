@@ -242,7 +242,6 @@ game.EnemyEntity = me.ObjectEntity.extend({
         return false;
     }
 });
-
 game.PlatformGenerator = me.Renderable.extend({
     init: function() {
         this.parent(new me.Vector2d(), me.game.viewport.width, me.game.viewport.height);
