@@ -13,7 +13,7 @@ game.TitleScreen = me.ScreenObject.extend({
         this.scrollerfont = null;
         this.scrollertween = null;
 
-        this.scroller = "MADE BY BOB AND THE POTATOES";
+        this.scroller = "MADE BY BOB IPPOLITO, JUSTIN LEE, CHRIS LIM, DAVID YI, AND LILY YOUNG";
         this.scrollerpos = 600;
     },
 
