@@ -52,7 +52,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         } else {
             game.data.score = game.data.score + 1;
         }
-        if (game.data.score > 4200) {
+        if (game.data.score > 100) {
             this.renderable.setCurrentAnimation("Snowman");
             game.Snowbkg.visible = true;
             game.Kitchenbkg.visible = false;
@@ -62,7 +62,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
             game.Snowbkg.visible = false;
         }
         
-        if (game.data.score > 9000) {
+        if (game.data.score > 200) {
             this.renderable.setCurrentAnimation("Saiyan");
             game.Saiyanbkg.visible=true;
             game.Snowbkg.visible=false;
