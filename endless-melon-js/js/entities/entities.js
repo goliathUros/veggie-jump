@@ -67,6 +67,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
             game.Saiyanbkg.visible=true;
             game.Snowbkg.visible=false;
             game.Kitchenbkg.visible=false;
+            me.audio.pauseAll;
             me.audio.play("9000");
         }
 
