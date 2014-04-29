@@ -1,18 +1,19 @@
 a flat stage
-endless running until death
+endless running until death OKAY
 
 Potato jumping over obstacles
-	potato movements
-		potato sprites
 		potato speed 
+	potato movements OKAY
+		potato speed OKAY
 			speeds up over time
-		sliding/shuffling along
 			jump button only - space bar
+		sliding/shuffling along OKAY
+			jump button only - space bar OKAY
 	stage speed
-		kitchen stage (repeating?)
+		kitchen stage (repeating?) OKAY
 			infinite kitchen counter
 			pitfalls
-				gaps
+				gaps OKAY
 				pots of stuff
 			shelves
 				jump through bottom to land on top
@@ -24,18 +25,18 @@ Potato jumping over obstacles
 		running mice
 
 	ART
-		stage
-		background
-		potato sprites
-		obstacles
+		stage OKAY
+		background OKAY
+		potato sprites OKAY
+		obstacles 
 		 
-Losing
-	death = restarting
-		pitfalls
+Losing OKAY
+	death = restarting OKAY
+		pitfalls OKAY
 		touching an obstacle
-Scoring 
-	endless running
-	distance counter - potameter
+Scoring OKAY
+	endless running OKAY
+	distance counter - potameter OKAY
 	
 
 
