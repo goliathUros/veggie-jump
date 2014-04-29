@@ -49,5 +49,5 @@ game.resources = [
 	{name: "cling", type: "audio", src: "data/sfx/", channel : 2},
 	{name: "stomp", type: "audio", src: "data/sfx/", channel : 1},
 	{name: "jump",  type: "audio", src: "data/sfx/", channel : 1},
-    {name:"9000", type:"audio", src:"data/sfx/", channel: 1},
+    //{name: "9000", type:"audio", src:"data/sfx/", channel: 1},
 ];
