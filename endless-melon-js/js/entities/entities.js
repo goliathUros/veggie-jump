@@ -148,7 +148,7 @@ game.CoinEntity = me.ObjectEntity.extend({
         me.audio.play("cling");
 
         // give some score
-        game.data.score += 50;        
+        game.data.score += 100;        
 
         // make sure it cannot be collected "again"
         this.collidable = true;
@@ -161,6 +161,7 @@ game.CoinEntity = me.ObjectEntity.extend({
             me.game.world.removeChild(this);
             me.entityPool.freeInstance(this);
         }
+        this.vel.x = (-1*(Math.floor(game.data.score/1000)+1))
         return true;
     }
 });
@@ -270,7 +271,7 @@ game.PlatformGenerator = me.Renderable.extend({
 game.PlatformEntity = me.ObjectEntity.extend({
     init: function(x, y, settings) {
         settings = settings || {};
-        settings.width = settings.width || 150;
+        settings.width = settings.width || 300;
         settings.height = settings.height || 10;
         this.renderable = new game.RenderableRect(0, 0, settings.width, settings.height);
         this.parent(x, y, settings);
@@ -288,6 +289,7 @@ game.PlatformEntity = me.ObjectEntity.extend({
             me.game.world.removeChild(this);
             me.entityPool.freeInstance(this);
         }
+        this.vel.x = (-1*(Math.floor(game.data.score/1000)+1))
         return true;
     }
 });
