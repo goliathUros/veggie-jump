@@ -53,7 +53,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         } else {
             game.data.score = game.data.score + 2;
         }
-        if (game.data.score > 200) {
+        if (game.data.score > 9000) {
             if (!this.over9000) {
                 me.audio.play("9000");
                 this.over9000 = true;
@@ -62,7 +62,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
             game.Saiyanbkg.visible=true;
             game.Snowbkg.visible=false;
             game.Kitchenbkg.visible=false;
-        } else if (game.data.score > 100) {
+        } else if (game.data.score > 4200) {
             this.renderable.setCurrentAnimation("Snowman");
             game.Snowbkg.visible = true;
             game.Kitchenbkg.visible = false;
