@@ -25,6 +25,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
         this.collidable = false;
         this.height = 64;
         this.alwaysUpdate = true;
+        this.over9000 = false;
 
 		// set the default horizontal & vertical speed (accel vector)
         this.setVelocity(3, 15);
@@ -52,7 +53,16 @@ game.PlayerEntity = me.ObjectEntity.extend({
         } else {
             game.data.score = game.data.score + 2;
         }
-        if (game.data.score > 4200) {
+        if (game.data.score > 200) {
+            if (!this.over9000) {
+                me.audio.play("9000");
+                this.over9000 = true;
+            }
+            this.renderable.setCurrentAnimation("Saiyan");
+            game.Saiyanbkg.visible=true;
+            game.Snowbkg.visible=false;
+            game.Kitchenbkg.visible=false;
+        } else if (game.data.score > 100) {
             this.renderable.setCurrentAnimation("Snowman");
             game.Snowbkg.visible = true;
             game.Kitchenbkg.visible = false;
@@ -60,14 +70,6 @@ game.PlayerEntity = me.ObjectEntity.extend({
             this.renderable.setCurrentAnimation("Potato");
             game.Kitchenbkg.visible = true;
             game.Snowbkg.visible = false;
-        }
-        
-        if (game.data.score > 9000) {
-            this.renderable.setCurrentAnimation("Saiyan");
-            game.Saiyanbkg.visible=true;
-            game.Snowbkg.visible=false;
-            game.Kitchenbkg.visible=false;
-            //me.audio.play("9000");
         }
 
         if (me.input.isKeyPressed('jump')) {
