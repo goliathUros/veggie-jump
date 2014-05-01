@@ -50,7 +50,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
             //this.vel.y = -2 * this.maxVel.y;
             game.data.score = 0;
         } else {
-            game.data.score = game.data.score + 1;
+            game.data.score = game.data.score + 2;
         }
         if (game.data.score > 4200) {
             this.renderable.setCurrentAnimation("Snowman");
@@ -161,7 +161,8 @@ game.CoinEntity = me.ObjectEntity.extend({
             me.game.world.removeChild(this);
             me.entityPool.freeInstance(this);
         }
-        this.vel.x = (-1*(Math.floor(game.data.score/1000)+1))
+        //coins start slow and speed up
+        this.vel.x = (-1*(Math.floor(game.data.score/1000)+3))
         return true;
     }
 });
@@ -248,6 +249,7 @@ game.PlatformGenerator = me.Renderable.extend({
     init: function() {
         this.parent(new me.Vector2d(), me.game.viewport.width, me.game.viewport.height);
         this.alwaysUpdate = true;
+        //change the frequency of coins and platforms. Set it to 1 if you want to see some crazy stuff xD WARNING: this will lag the crap out of your computer. Have fun!
         this.platformFrequency = 40;
         this.nextPlatformAt = 0;
         this.tick = 0;
@@ -271,6 +273,7 @@ game.PlatformGenerator = me.Renderable.extend({
 game.PlatformEntity = me.ObjectEntity.extend({
     init: function(x, y, settings) {
         settings = settings || {};
+        //change width of platforms below
         settings.width = settings.width || 300;
         settings.height = settings.height || 10;
         this.renderable = new game.RenderableRect(0, 0, settings.width, settings.height);
@@ -289,7 +292,8 @@ game.PlatformEntity = me.ObjectEntity.extend({
             me.game.world.removeChild(this);
             me.entityPool.freeInstance(this);
         }
-        this.vel.x = (-1*(Math.floor(game.data.score/1000)+1))
+        //platform speed starts slow; gets faster
+        this.vel.x = (-1*(Math.floor(game.data.score/1000)+3))
         return true;
     }
 });
