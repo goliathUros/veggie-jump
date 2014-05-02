@@ -27,7 +27,7 @@ game.TitleScreen = me.ScreenObject.extend({
 
             // set the scroller
             this.scrollerfont = new me.BitmapFont("32x32_font", 32);
-
+            me.audio.play("cling");
         }
 
         // reset to default value
@@ -40,9 +40,6 @@ game.TitleScreen = me.ScreenObject.extend({
 
         // enable the keyboard
         me.input.bindKey(me.input.KEY.ENTER, "enter", true);
-
-        // play something
-        me.audio.play("cling");
 
     },
 

@@ -41,7 +41,6 @@ game.resources = [
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
 	 */	
-    {name: "dst-inertexponent", type: "audio", src: "data/bgm/", channel : 1},
 	/* Sound effects. 
 	 * @example
 	 * {name: "example_sfx", type: "audio", src: "data/sfx/", channel : 2}
@@ -49,5 +48,6 @@ game.resources = [
 	{name: "cling", type: "audio", src: "data/sfx/", channel : 2},
 	{name: "stomp", type: "audio", src: "data/sfx/", channel : 1},
 	{name: "jump",  type: "audio", src: "data/sfx/", channel : 1},
+    {name: "die", type:"audio", src: "data/sfx/", channel : 2},
     {name:"9000", type:"audio", src:"data/sfx/", channel: 1},
 ];

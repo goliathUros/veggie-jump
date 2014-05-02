@@ -58,7 +58,6 @@ game.PlayScreen = me.ScreenObject.extend({
         me.game.world.addChild(player);
         me.game.world.addChild(new game.PlatformGenerator());
         // play the audio track
-        //me.audio.playTrack("DST-InertExponent");
 	},
 
 
@@ -66,8 +65,6 @@ game.PlayScreen = me.ScreenObject.extend({
 	 *  action to perform when leaving this screen (state change)
 	 */
 	onDestroyEvent: function() {
-        // stop the current audio track
-        //me.audio.stopTrack();
 		// remove the HUD from the game world
 		me.game.world.removeChild(this.HUD);
 	}
